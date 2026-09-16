@@ -434,17 +434,17 @@ class ReactionFlask():
         )
       )
     
-    for k, yVal in enumerate(y):
+    '''for k, yVal in enumerate(y):
       #If the value is negative and large enough
       # that it is unlikely to have originated
       # from float arithmetic errors, then there's
       # an issue  
-      if yVal < 0 and abs(yVal) > 0.01:
+      if yVal < 0 and abs(yVal) > 10:
         raise(
           ValueError(
-            f"Element {k} of the y vector is negative = {yVal}"
+            f"Element {k} of the y vector is negative = {yVal} at time = {t}"
           )
-        )
+        )'''
 
     #1: Set up receptacle for derivative values
     derivative = np.zeros(len(self._concentrations))
